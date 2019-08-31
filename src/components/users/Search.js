@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import GithubContext from './../../context/github/githubContext';
+
 import PropTypes from 'prop-types';
 
 const Search = ({ showClear, clearUsers, setAlert, searchUsers }) => {
+  const githubContext = useContext(GithubContext);
+  const {} = githubContext;
   const [text, setText] = useState('');
 
   const onSubmit = e => {
